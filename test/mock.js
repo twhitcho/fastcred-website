@@ -1,0 +1,16 @@
+// Mock Supabase client for UI smoke tests
+window.FASTCRED_BACKEND={url:"https://mock.supabase.co",key:"eyJmock"};
+const APP={id:"a1",ref:"FC-261028-79B9D",created_at:new Date(Date.now()-864e5).toISOString(),updated_at:new Date(Date.now()-864e5).toISOString(),client_updated_at:new Date().toISOString(),product:"working-capital",product_name:"SME Working Capital",amount:2000,term:4,applicant_name:"Tendai Moyo",mobile:"+263771234567",status:"under_review",assigned_to:"u1",is_business:true,notify_channel:"both",monthly_rate:0.1,data:{fullName:"Tendai Moyo",gender:"Female",dob:"1988-04-02",idNumber:"63-123456A78",mobile:"+263 77 123 4567",bizName:"Moyo Hardware",kinName:"A Moyo",ref1Name:"B",purpose:"Restocking",signature:"Tendai Moyo"}};
+const T={applications:[APP,{...APP,id:"a2",ref:"FC-261027-AAAAA",applicant_name:"Chipo N",status:"disbursed",approved_amount:1500,approved_term:3,client_updated_at:null}],
+ staff:[{user_id:"u1",full_name:"Rudo Officer",email:"r@f.co.zw",role:"admin",active:true}],settings:[{key:"monthly_rate",value:"0.10"},{key:"min_term",value:"1"},{key:"max_term",value:"4"},{key:"sending_enabled",value:"true"}],
+ documents:[{id:"d1",application_id:"a1",kind:"id",label:"Copy of ID",file_path:"t/id/x.jpg",file_name:"id.jpg",mime:"image/jpeg",uploaded_at:new Date().toISOString(),verified:false}],
+ guarantors:[{id:"g1",ref:"FCG-1",full_name:"Farai G",mobile:"+263772223333",loanee_name:"Tendai Moyo",created_at:new Date().toISOString(),data:{fullName:"Farai G",phone:"0772223333"},applications:null}],
+ events:[{at:new Date().toISOString(),note:"Application submitted online",kind:"status",client_visible:true}],
+ installments:[{id:"i1",application_id:"a2",n:1,due_date:"2026-10-20",amount:650,paid_amount:0,status:"overdue",applications:{id:"a2",ref:"FC-261027-AAAAA",applicant_name:"Chipo N",mobile:"+263712000111",status:"disbursed",product_name:"Emergency"}}],
+ payments:[],outbox:[{id:1,channel:"sms",to_phone:"+263771234567",body:"FastCred: Hi Tendai...",status:"queued",attempts:0,error:"Twilio is not set up yet (add the secrets in Vault).",created_at:new Date().toISOString(),template_key:"received",applications:{id:"a1",ref:"FC",applicant_name:"Tendai"}}],
+ message_templates:[{key:"received",label:"Application received",body:"FastCred: Hi {first_name}",enabled:true}]};
+window.__rpc=[];
+function q(table){let rows=(T[table]||[]).slice();const b={select(){return b},order(){return b},limit(){return b},neq(k,v){rows=rows.filter(r=>r[k]!==v);return b},lte(){return b},is(){return b},eq(k,v){rows=rows.filter(r=>r[k]===v);return b},
+ maybeSingle(){return Promise.resolve({data:rows[0]||null,error:null})},then(res){return Promise.resolve({data:rows,error:null}).then(res)}};return b}
+window.supabase={createClient(){return{auth:{getSession:async()=>({data:{session:window.__signedIn?{user:{id:"u1"}}:null}}),signInWithPassword:async()=>{window.__signedIn=true;return{error:null}},signOut:async()=>{window.__signedIn=false},onAuthStateChange(){},resetPasswordForEmail:async()=>({}),updateUser:async()=>({})},
+ from:q,rpc:async(fn,args)=>{window.__rpc.push([fn,args]);return{data:{ok:true},error:null}},storage:{from(){return{createSignedUrl:async()=>({data:{signedUrl:"data:image/gif;base64,R0lGODlhAQABAAAAACw="}})}}}}}};
