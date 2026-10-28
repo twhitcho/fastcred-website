@@ -4,8 +4,8 @@ There are two parts:
 
 | Part | Address | Who uses it |
 |---|---|---|
-| Public website | `https://twhitcho.github.io/fastcred-website/` | Clients apply, upload documents, track their loan, guarantors fill in their form |
-| Loans desk | `https://twhitcho.github.io/fastcred-website/admin.html` | Loan officers review, approve or reject with reasons, release funds, record payments |
+| Public website | `https://fastcred.pages.dev/` | Clients apply, upload documents, track their loan, guarantors fill in their form |
+| Loans desk | `https://fastcred.pages.dev/admin.html` | Loan officers review, approve or reject with reasons, release funds, record payments |
 
 Data and documents live in your **Supabase** project. Messages go out through **Twilio**.
 
@@ -37,7 +37,7 @@ window.FASTCRED_BACKEND = {
 Never put the `service_role` / secret key in the website.
 
 Also go to **Authentication → URL Configuration** and set **Site URL** to
-`https://twhitcho.github.io/fastcred-website/admin.html`. Password reset links then go to the loans desk.
+`https://fastcred.pages.dev/admin.html`. Password reset links then go to the loans desk.
 
 ## 3. Create your first admin (the loans desk login)
 
@@ -104,7 +104,7 @@ Clients choose SMS, WhatsApp or both on the application form. Managers can edit 
 ## 6. Publish on GitHub Pages
 
 The website is in the `docs/` folder. In GitHub, open the repo → **Settings → Pages**, then set **Source: Deploy from a branch**, **Branch: main**, **Folder: /docs**, and click **Save**.
-The site is live at `https://twhitcho.github.io/fastcred-website/` in about a minute.
+The site is live at `https://fastcred.pages.dev/` in about a minute.
 
 To use FastCred's own domain later (e.g. `www.fastcred.co.zw`), add it under **Settings → Pages → Custom domain**. Then update `site_url` in the loans desk Settings and the Site URL in Supabase.
 
