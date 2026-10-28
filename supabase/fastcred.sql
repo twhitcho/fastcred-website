@@ -17,7 +17,7 @@ create table if not exists public.settings (
   note  text
 );
 insert into public.settings(key,value,note) values
- ('site_url',        'https://twhitcho.github.io/fastcred-website/', 'Public website address used in messages'),
+ ('site_url',        'https://fastcred.netlify.app/', 'Public website address used in messages'),
  ('office_phone',    '+263 86 440 85732',                          'Phone number shown in messages'),
  ('monthly_rate',    '0.10',                                       'Interest per month used for repayment schedules'),
  ('min_term',        '1',                                          'Shortest repayment period (months)'),
