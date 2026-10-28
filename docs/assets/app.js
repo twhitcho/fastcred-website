@@ -66,7 +66,7 @@ const ribbons=(cls="ribbons")=>`<svg class="${cls}" viewBox="0 0 720 720" aria-h
 <linearGradient id="rg2" x1="0" x2="1"><stop offset="0" stop-color="#025c28"/><stop offset="1" stop-color="#179b06"/></linearGradient>
 <linearGradient id="rg3" x1="1" x2="0"><stop offset="0" stop-color="#0f5372"/><stop offset="1" stop-color="#0b3448"/></linearGradient></defs>
 <path d="M300 110 C330 60 390 60 420 110 L600 420" fill="none" stroke="url(#rg1)" stroke-width="64" stroke-linecap="round" opacity=".16"/>
-<path d="M630 470 C660 525 630 575 570 575 L210 575" fill="none" stroke="url(#rg2)" stroke-width="64" stroke-linecap="round" opacity=".2"/>
+<path d="M630 470 C660 525 630 575 570 575 L210 575" fill="none" stroke="url(#rg1)" stroke-width="64" stroke-linecap="round" opacity=".1"/>
 <path d="M150 575 C90 575 60 525 90 470 L270 160" fill="none" stroke="url(#rg3)" stroke-width="64" stroke-linecap="round" opacity=".14"/></svg>`;
 
 const coverArt=(p,big)=>{const [a,b,c]=p.cover;const id="cv"+p.slug.replace(/\W/g,"");

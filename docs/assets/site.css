@@ -1,7 +1,7 @@
 /* Layout concept: "ribbon & ledger" — angled bands lifted from the FastCred triangle mark, with ledger-style figure cards in tabular numerals. */
 :root{
-  --ink:#0c2230; --ink-2:#3b5363; --ink-3:#647a88;
-  --paper:#f6f9f7; --surface:#ffffff; --surface-2:#edf4ef; --line:#d6e2da;
+  --ink:#0c2230; --ink-2:#3b4a55; --ink-3:#66737d;
+  --paper:#ffffff; --surface:#ffffff; --surface-2:#f4f5f7; --line:#e2e5e9;
   --navy:#0f5372; --navy-deep:#0b3448; --forest:#025c28; --leaf:#179b06; --leaf-ink:#0f7a05;
   --leaf-soft:#e3f3dd; --navy-soft:#e1edf3; --warn:#9a5b00; --warn-soft:#fff3dc; --danger:#b42318;
   --on-brand:#ffffff;
@@ -15,18 +15,18 @@
   --wrap:1180px;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --ink:#e7f0ea; --ink-2:#b4c5bc; --ink-3:#8aa098;
-  --paper:#07141b; --surface:#0d1f29; --surface-2:#112a35; --line:#1e3a46;
+  --ink:#eceff2; --ink-2:#b9c0c7; --ink-3:#8b949d;
+  --paper:#0f1216; --surface:#161a1f; --surface-2:#1d2228; --line:#2a3038;
   --navy:#6fb3d6; --navy-deep:#0a2a3a; --forest:#1f8a3e; --leaf:#46c12c; --leaf-ink:#5fd343;
-  --leaf-soft:#12301d; --navy-soft:#0f2b3a; --warn:#f0b65a; --warn-soft:#2b2110; --danger:#ff8a80;
+  --leaf-soft:#14281a; --navy-soft:#16242e; --warn:#f0b65a; --warn-soft:#2b2110; --danger:#ff8a80;
   --grad-navy:linear-gradient(135deg,#071d28 0%,#0d3a52 100%);
   --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
   color-scheme:dark}}
 :root[data-theme="dark"]{
-  --ink:#e7f0ea; --ink-2:#b4c5bc; --ink-3:#8aa098;
-  --paper:#07141b; --surface:#0d1f29; --surface-2:#112a35; --line:#1e3a46;
+  --ink:#eceff2; --ink-2:#b9c0c7; --ink-3:#8b949d;
+  --paper:#0f1216; --surface:#161a1f; --surface-2:#1d2228; --line:#2a3038;
   --navy:#6fb3d6; --navy-deep:#0a2a3a; --forest:#1f8a3e; --leaf:#46c12c; --leaf-ink:#5fd343;
-  --leaf-soft:#12301d; --navy-soft:#0f2b3a; --warn:#f0b65a; --warn-soft:#2b2110; --danger:#ff8a80;
+  --leaf-soft:#14281a; --navy-soft:#16242e; --warn:#f0b65a; --warn-soft:#2b2110; --danger:#ff8a80;
   --grad-navy:linear-gradient(135deg,#071d28 0%,#0d3a52 100%);
   --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -14px rgba(0,0,0,.6);
   color-scheme:dark}

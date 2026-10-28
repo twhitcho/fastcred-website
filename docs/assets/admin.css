@@ -1,5 +1,5 @@
 /* Loans desk: dense, scannable working surface built on the public site's tokens */
-body{background:var(--paper)}
+body{background:var(--surface-2)}
 .boot{padding:60px 20px;text-align:center;color:var(--ink-3)}
 .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--navy-deep);color:#d6e7ee}
 .bar .wrap{display:flex;align-items:center;gap:18px;padding-block:10px;max-width:1400px}
